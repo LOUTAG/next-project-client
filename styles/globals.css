@@ -18,27 +18,27 @@ a {
 @font-face{
   font-family: "Recoleta";
   font-weight:300;
-  src: url('../assets/fonts/Recoleta-Light.ttf') format('truetype');
+  src: url('../public/assets/fonts/Recoleta-Light.ttf') format('truetype');
 }
 @font-face{
   font-family: "Recoleta";
   font-weight: 400;
-  src: url('../assets/fonts/Recoleta-Regular.ttf') format('truetype');
+  src: url('../public/assets/fonts/Recoleta-Regular.ttf') format('truetype');
 }
 @font-face{
   font-family: "Recoleta";
   font-weight: 600;
-  src: url('../assets/fonts/Recoleta-SemiBold.ttf') format('truetype');
+  src: url('../public/assets/fonts/Recoleta-SemiBold.ttf') format('truetype');
 }
 @font-face{
   font-family: "Recoleta";
   font-weight: 700;
-  src: url('../assets/fonts/Recoleta-Bold.ttf') format('truetype');
+  src: url('../public/assets/fonts/Recoleta-Bold.ttf') format('truetype');
 }
 @font-face{
   font-family: "Recoleta";
   font-weight: 900;
-  src: url('../assets/fonts/Recoleta-Black.ttf') format('truetype');
+  src: url('../public/assets/fonts/Recoleta-Black.ttf') format('truetype');
 }
 
 @tailwind base;
