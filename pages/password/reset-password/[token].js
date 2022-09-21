@@ -74,7 +74,7 @@ export async function getServerSideProps(context) {
   const { token } = context.query;
   try {
     const response = await axios.post(
-      `${process.env.NEXT_PUBLIC_SERVER_URL}/api/users/verify-reset-token`,
+      `${process.env.API}/api/users/verify-reset-token`,
       { token }
     );
     return {
