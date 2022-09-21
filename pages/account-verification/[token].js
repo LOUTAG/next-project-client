@@ -9,7 +9,6 @@ import {
 
 const AccountVerification = () => {
   const router = useRouter();
-  const { token } = router.query;
   const dispatch = useDispatch();
   const user = useSelector((store) => store.user);
   const { loading, isValidated, error } = user;
@@ -17,15 +16,16 @@ const AccountVerification = () => {
   //mounted
   useEffect(() => {
     if (!router.isReady) return;
+    const { token } = router.query;
     dispatch(accountVerificationAction(token));
-  }, [router.isReady]);
+  }, [router.isReady, dispatch]);
 
   //unmounted
   useEffect(()=>{
     return ()=>{
         dispatch(resetAccountVerificationAction());
     }
-  },[])
+  },[dispatch])
 
   return (
     <div className="font-Recoleta">

@@ -23,7 +23,7 @@ const AddCategory = () => {
       if (actionRef.current.error || actionRef.current.isSuccess)
         return dispatch(resetCreateCategoryAction());
     };
-  }, []);
+  }, [dispatch]);
 
   useEffect(() => {
     textRef.current.style.height = "auto";

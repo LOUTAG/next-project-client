@@ -18,6 +18,7 @@ const Login = () => {
 
   useEffect(() => {
     userAuth && router.push("/");
+     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   useEffect(() => {
@@ -31,7 +32,7 @@ const Login = () => {
     return () => {
       dispatch(resetLoginAction());
     };
-  }, [isAuth]);
+  }, [isAuth, dispatch]);
 
   useEffect(() => {
     if (error) toast.error(error);
