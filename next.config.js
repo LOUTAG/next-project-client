@@ -1,7 +1,6 @@
 /** @type {import('next').NextConfig} */
 module.exports = {
   async rewrites() {
-    console.log(process.env.NODE_ENV);
     return process.env.NODE_ENV === "development"
       ? [
           {
@@ -11,4 +10,7 @@ module.exports = {
         ]
       : [];
   },
+  images: {
+    domains: ['next-project-udemy.s3.amazonaws.com', 'next-project-udemy.s3.eu-west-3.amazonaws.com'],
+  }
 };

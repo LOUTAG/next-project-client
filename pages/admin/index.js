@@ -45,12 +45,17 @@ const Admin = () => {
         <div key={uuidv4()}>
           <Link href={`/categories/${item.slug}`}>
             <a>
-              <Image 
-              src={item.image.url} 
-              alt={item.name} 
-              placeholder="blur"
-              layout="fill"
-              objectFit="contain" />
+              <div>
+                <Image
+                  src={item.image.url}
+                  alt={item.name}
+                  width={968}
+                  height={719}
+                  loading="lazy"
+                  placeholder="blur"
+                  blurDataURL={item.image.url}
+                />
+              </div>
               <div>{item.name}</div>
             </a>
           </Link>

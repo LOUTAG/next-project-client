@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { v4 as uuidv4 } from "uuid";
 import axios from "axios";
 
@@ -8,10 +9,17 @@ const Home = ({ data }) => {
       return (
         <Link href={`/categories/${item.slug}`} key={uuidv4()}>
           <a>
-            <img
-              src={item.image.url}
-              alt={item.name}
-            />
+          <div>
+                <Image
+                  src={item.image.url}
+                  alt={item.name}
+                  width={968}
+                  height={719}
+                  loading="lazy"
+                  placeholder="blur"
+                  blurDataURL={item.image.url}
+                />
+              </div>
             <div>{item.name}</div>
           </a>
         </Link>
